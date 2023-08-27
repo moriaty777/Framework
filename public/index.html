@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Imagens com Nomes</title>
+<style>
+  .container {
+    text-align: center;
+  }
+  .big-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .small-image {
+    width: 10%;
+    margin: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Qual seu animal favorito?</h1>
+  <img src="https://o.remove.bg/downloads/18613528-1d67-4c1a-85fa-bfc42c413d66/image-removebg-preview.png" alt="Imagem Grande" class="big-image">
+  <div class="image-list">
+    <img src="https://o.remove.bg/downloads/c7f17ac7-bb65-421d-b300-dbe38ef0198f/image-removebg-preview.png" alt="Imagem 1" class="small-image" onclick="showImageName('Pássaro')">
+    <img src="https://o.remove.bg/downloads/ba5ed482-9d34-47bd-82e8-014e417887a1/image-removebg-preview.png" alt="Imagem 2" class="small-image" onclick="showImageName('Cachorro')">
+    <img src="https://o.remove.bg/uploads/681c091d-f49d-4a3f-bbda-a4b51ac3923b/image.png" alt="Imagem 3" class="small-image" onclick="showImageName('Gato')">
+  </div>
+  <p id="image-name"></p>
+</div>
+<script>
+  function showImageName(name) {
+    const imageNameElement = document.getElementById("image-name");
+    imageNameElement.textContent = "Nome da imagem: " + name;
+  }
+</script>
+</body>
